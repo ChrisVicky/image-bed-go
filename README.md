@@ -37,6 +37,8 @@ token       = "xxxxxxxxxxxxxxxx"
 baseURL     = "https://raw.githubusercontent.com"
 ```
 
+* Configuration Default Location: `~/.config/upload-img-github/config.toml`
+
 ### 3. Run
 ```shell
 go run imagebed.go ./img/blured.png
