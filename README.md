@@ -1,12 +1,44 @@
-![]()
-![image_2023-09-25-17-12-19](img/image_2023-09-25-17-12-19.png)
-<center>
-    <img style="border-radius: 0.3125em;box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" width="80%"
-        src="img/image_2023-09-25-17-12-21.png"><br>
-    <div style="color:orange; border-bottom: 1px solid #d9d9d9;display: inline-block;color: #999;padding: 2px;">img</div>
-</centerear
+# Github Image Host
 
-![image_2023-09-25-17-14-02](img/image_2023-09-25-17-14-02.png)
+## Feature and Functionality
+* Input: Image Path (Stored Locally)
+* Output: Image URL (Stored in Github Repo)
 
-![image_2023-09-25-17-15-08](img/image_2023-09-25-17-15-08.png)
-![image_2023-09-25-17-17-05](https://raw.githubusercontent.com/ChrisVicky/image-bed/main/2023-09/image_2023-09-25-17-17-05.png)
+## Dependency
+* Github Api: github.com/google/go-github/v55/github
+* Toml: github.com/BurntSushi/toml
+
+## Usage
+
+### 1. Github Setup
+
+1. Github Repo (Public) Setup
+2. Token Generation
+* https://github.com/settings/tokens
+* ![image_2023-09-25-20-11-38](https://raw.githubusercontent.com/ChrisVicky/image-bed/main/2023-09/image_2023-09-25-20-11-38.png)
+
+### 2. Program Configuration
+1. Copy Configurations
+```shell
+cp config.toml.example config.toml
+```
+2. Configurations
+```toml
+# Owner of the Repo
+owner       = "xxxxx"
+
+# Repo for storing
+repo        = "github-image-bed"
+
+# Token generated from Github
+token       = "xxxxxxxxxxxxxxxx"
+
+# Baseurl for fetching image
+baseURL     = "https://raw.githubusercontent.com"
+```
+
+### 3. Run
+```shell
+go run imagebed.go ./img/blured.png
+```
+
