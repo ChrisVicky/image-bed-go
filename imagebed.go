@@ -13,10 +13,13 @@ import (
 	"golang.org/x/oauth2"
 )
 
+var conf = "~/.config/upload-img-github/config.toml"
+
 func main() {
-    c, err := config.ReadConfig("config.toml")
+    c, err := config.ReadConfig(conf)
     if err != nil {
-        log.Printf("%v <path to image>\n", os.Args[0])
+        log.Printf("Cannot find Configuration at %v", conf)
+        return
     }
     
     if len(os.Args) < 2 {
