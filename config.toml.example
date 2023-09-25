@@ -1,0 +1,11 @@
+# Owner of the Repo
+owner       = "xxxxx"
+
+# Repo for storing
+repo        = "github-image-bed"
+
+# Token generated from Github
+token       = "xxxxxxxxxxxxxxxx"
+
+# Baseurl for fetching image
+baseURL     = "https://raw.githubusercontent.com"
