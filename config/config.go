@@ -1,8 +1,11 @@
 package config
 
 import (
-    "os"
-    "github.com/BurntSushi/toml"
+	"log"
+	"os"
+	"path/filepath"
+
+	"github.com/BurntSushi/toml"
 )
 
 
@@ -40,7 +43,10 @@ func ReadConfig(fn string) (ac *Config, err error){
         cBytes  []byte
     )
 
-    if _, err = os.Stat(fn); err != nil {
+    abs, err := filepath.Abs(fn)
+
+    if _, err = os.Stat(abs); err != nil {
+        log.Printf("Error Open: %v, %v", abs, err)
         fn = DefaultFile
     }
 
