@@ -45,5 +45,6 @@ go run imagebed.go ./img/blured.png
 ```
 
 ## Vim-Integration
-![vim-image-bed-integration](./img/vim-image-bed-integration.gif)
+* A [vim-integration](https://github.com/ChrisVicky/img-paste.vim) is implemented 
+![vim-image-bed-integration](https://raw.githubusercontent.com/ChrisVicky/image-bed/main/2023-10/vim-image-bed-integration.gif)
 
