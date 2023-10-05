@@ -44,3 +44,6 @@ baseURL     = "https://raw.githubusercontent.com"
 go run imagebed.go ./img/blured.png
 ```
 
+## Vim-Integration
+![vim-image-bed-integration](./img/vim-image-bed-integration.gif)
+
